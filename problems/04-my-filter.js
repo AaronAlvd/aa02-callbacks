@@ -21,6 +21,13 @@ console.log(result2);      // ['choose', 'words', 'only']
 
 function myFilter(array, cb) {
     // Your code here 
+    let retArr = []
+    
+    for (let element of array) {
+        (cb(element) ? retArr.push(element) : null)
+    }
+
+    return retArr
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
