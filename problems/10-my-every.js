@@ -22,7 +22,13 @@ console.log(myEvery(['book', 'door', 'pen'], hasO));    // false
 *******************************************************************************/
 
 function myEvery(array, cb) {
-    // Your code here 
+    let retArray = [];
+
+    for (let element of array) {
+        value = cb(element)
+        retArray.push(value);
+    }
+    return (!retArray.includes(false))
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
