@@ -28,6 +28,12 @@ console.log(result4); // 0
 
 function count(array, cb) {
   // Your code here 
+  let retArr = []
+
+  for (let element of array) {
+    cb(element) ? retArr.push(element) : null
+  }
+  return retArr.length
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
