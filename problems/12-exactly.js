@@ -28,7 +28,13 @@ console.log(result4); // true
 *******************************************************************************/
 
 function exactly(array, num, cb) {
-  // Your code here 
+  let retArr = []
+
+  for (let element of array) {
+    (cb(element) ? retArr.push(element) : null)
+  }
+
+  return retArr.length === num
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
