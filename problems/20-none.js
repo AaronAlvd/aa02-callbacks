@@ -29,7 +29,13 @@ console.log(result4);   // false
 *******************************************************************************/
 
 function none(array, cb) {
-  // Your code here 
+  let result = []
+
+  for (let el of array) {
+    result.push(cb(el))
+  }
+
+  return !result.includes(true)
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
