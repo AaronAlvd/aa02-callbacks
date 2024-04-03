@@ -10,8 +10,12 @@ console.log(minValueCallback([64, 25, 49, 9, 100], Math.sqrt));  // 3
 
 *******************************************************************************/
 
-function minValueCallback(array, cb) {
-    // Your code here 
+function andSelect(array, cb1, cb2) {
+  let retArr = []
+  for (let element of array) {
+    (cb1(element) && cb2(element) ? retArr.push(element): null)
+  }
+  return retArr
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
